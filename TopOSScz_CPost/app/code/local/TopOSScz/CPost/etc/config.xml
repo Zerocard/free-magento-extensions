@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * TopOSScz CPost module
+ *
+ * @category   TopOSScz
+ * @package    TopOSScz_CPost
+ * @copyright  Copyright (c) 2011 TopOSS.cz (Josef Jezek) <magento@toposs.cz>
+ * @license    http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License version 3
+ */
+-->
+<config>
+    <modules>
+        <TopOSScz_CPost>
+            <version>1.0.1</version>
+			<depends>
+				<Mage_Sales />
+				<Mage_Adminhtml />
+			</depends>
+        </TopOSScz_CPost>
+    </modules>
+
+    <global>
+        <models>
+            <toposscz_cpost>
+                <class>TopOSScz_CPost_Model</class>
+            </toposscz_cpost>
+        </models>
+        <blocks>
+            <toposscz_cpost>
+                <class>TopOSScz_CPost_Block</class>
+            </toposscz_cpost>
+        </blocks>
+        <helpers>
+            <toposscz_cpost>
+                <class>TopOSScz_CPost_Helper</class>
+            </toposscz_cpost>
+        </helpers>
+    </global>
+
+    <admin>
+        <routers>
+            <toposscz_cpost>
+                <use>admin</use>
+                <args>
+                    <module>TopOSScz_CPost</module>
+                    <frontName>toposscz_cpost</frontName>
+                </args>
+            </toposscz_cpost>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <TopOSScz_CPost>
+                    <files>
+                        <default>TopOSScz_CPost.csv</default>
+                    </files>
+                </TopOSScz_CPost>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <toposscz_cpost>
+            <export>
+                <file_extension>.csv</file_extension>
+                <file_charset>UTF-8</file_charset>
+                <endofline_character>lf</endofline_character>
+                <field_delimiter>double_quotes</field_delimiter>
+                <field_separator>;</field_separator>
+            </export>
+            <import>
+                <default_tracking_title>Česká pošta</default_tracking_title>
+                <send_email>1</send_email>
+                <shipping_comment><![CDATA[Obchodní balík BO je na České poště uchován k vyzvednutí max 7 dní! Pohyb Vaší zásilky můžete sledovat online na adrese: http://www.cpost.cz/cz/nastroje/sledovani-zasilky.php?locale=CZ&send.x=0&send.y=0&send=submit&go=ok&barcode=]]></shipping_comment>
+                <include_comment>1</include_comment>
+            </import>
+        </toposscz_cpost>
+    </default>
+
+</config>

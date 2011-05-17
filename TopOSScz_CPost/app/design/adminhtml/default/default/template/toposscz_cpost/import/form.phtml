@@ -1,0 +1,72 @@
+<!--
+/**
+ * TopOSScz CPost module
+ *
+ * @category   TopOSScz
+ * @package    TopOSScz_CPost
+ * @copyright  Copyright (c) 2011 TopOSS.cz (Josef Jezek) <magento@toposs.cz>
+ * @license    http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License version 3
+ */
+-->
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td><h3 class="icon-head head-tax-rate-importExport"><?php echo Mage::helper('toposscz_cpost')->__('Import from CPost') ?></h3></td>
+        </tr>
+    </table>
+</div>
+<div class="entry-edit">
+    <div class="box-left">
+        <form id="import_form" action="<?php echo $this->getUrl('*/*/import') ?>" method="post" enctype="multipart/form-data">
+            <?php echo $this->getBlockHtml('formkey')?>
+            <div class="entry-edit-head">
+                <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('toposscz_cpost')->__('Import from CPost') ?></h4>
+            </div>
+
+            <fieldset>
+            <table class="form-list" cellspacing="0">
+                <colgroup class="label"/>
+                <colgroup class="value"/>
+                <tbody>
+                    <tr>
+                        <td class="label">
+                            <label><?php echo Mage::helper('toposscz_cpost')->__('Tracking Title') ?></label>
+                        </td>
+                        <td class="value">
+                            <input type="text" name="import_toposscz_cpost_tracking_title" class="input-file" value="<?php echo Mage::helper('toposscz_cpost')->getConfigurationDefaultTrackingTitle() ?>"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <label><?php echo Mage::helper('toposscz_cpost')->__('Import File') ?></label>
+                        </td>
+                        <td class="value">
+                            <input type="file" name="import_toposscz_cpost_file" class="input-file required-entry"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="value">
+                            <?php $button_label = Mage::helper('toposscz_cpost')->__('Import'); ?>
+                            <?php echo $this->getButtonHtml($button_label, "this.form.submit();displayLoadingMask();") ?>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </fieldset>
+
+        </form>
+        <script type="text/javascript">
+            var importForm = new varienForm('import_form');
+
+            function displayLoadingMask()
+            {
+                var loaderArea = $$('#html-body .wrapper')[0]; // Blocks all page
+                Position.clone($(loaderArea), $('loading-mask'), {offsetLeft:-2});
+                toggleSelectsUnderBlock($('loading-mask'), false);
+                Element.show('loading-mask');
+            }
+        </script>
+    </div>
+    <div class="clear"></div>
+</div>

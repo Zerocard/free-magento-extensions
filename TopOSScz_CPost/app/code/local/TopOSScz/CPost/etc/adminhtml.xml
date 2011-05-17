@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * TopOSScz CPost module
+ *
+ * @category   TopOSScz
+ * @package    TopOSScz_CPost
+ * @copyright  Copyright (c) 2009 JibÃ© <contact via Magento Connect module page>
+ * @license    http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License version 3
+ */
+-->
+
+<adminhtml>
+        <menu>
+             <sales>
+                 <children>
+                    <toposscz_cpost translate="title">
+                        <title>CPost</title>
+                        <sort_order>15</sort_order>
+                        <children>
+                            <export_invoice translate="title">
+                                <title>Export by Invoices</title>
+                                <action>toposscz_cpost/export_invoice</action>
+                                <sort_order>10</sort_order>
+                            </export_invoice>
+                            <export_order translate="title">
+                                <title>Export by Orders</title>
+                                <action>toposscz_cpost/export_order</action>
+                                <sort_order>20</sort_order>
+                            </export_order>
+                            <import translate="title">
+                                <title>Import</title>
+                                <action>toposscz_cpost/import</action>
+                                <sort_order>30</sort_order>
+                            </import>
+                        </children>
+                    </toposscz_cpost>
+                </children>
+             </sales>
+        </menu>
+
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <sales>
+                            <children>
+                                <toposscz_cpost translate="title">
+                                    <title>CPost</title>
+                                    <children>
+                                        <export_invoice translate="title">
+                                            <title>Export by Invoices</title>
+                                        </export_invoice>
+                                        <export_order translate="title">
+                                            <title>Export by Orders</title>
+                                        </export_order>
+                                        <import translate="title">
+                                            <title>Import</title>
+                                        </import>
+                                    </children>
+                                    <sort_order>15</sort_order>
+                                </toposscz_cpost>
+                            </children>
+                        </sales>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <toposscz_cpost>
+                                            <title>TopOSScz CPost</title>
+                                            <sort_order>100</sort_order>
+                                        </toposscz_cpost>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+</adminhtml>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * TopOSScz CPost module
+ *
+ * @category   TopOSScz
+ * @package    TopOSScz_CPost
+ * @copyright  Copyright (c) 2011 TopOSS.cz (Josef Jezek) <magento@toposs.cz>
+ * @license    http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License version 3
+ */
+-->
+<config>
+    <sections>
+        <toposscz_cpost>
+            <label>TopOSScz CPost</label>
+            <tab>sales</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>2000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <export translate="label">
+                    <label>Export Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <file_extension translate="label">
+                            <label>File Extension</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>toposscz_cpost/config_source_fileExtension</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </file_extension>
+                        <file_charset translate="label">
+                            <label>File Charset</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>toposscz_cpost/config_source_fileCharset</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </file_charset>
+                        <endofline_character translate="label">
+                            <label>End Of Line Character</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>toposscz_cpost/config_source_endOfLineCharacter</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </endofline_character>
+                        <field_delimiter translate="label">
+                            <label>Field Delimiter</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>toposscz_cpost/config_source_fieldDelimiter</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </field_delimiter>
+                        <field_separator translate="label">
+                            <label>Field Separator</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>toposscz_cpost/config_source_fieldSeparator</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </field_separator>
+                    </fields>
+                </export>
+                <import translate="label">
+                    <label>Import Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <default_tracking_title translate="label comment">
+                            <label>Default Tracking Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>This value can be changed in the import form</comment>
+                        </default_tracking_title>
+                        <send_email translate="label comment">
+                            <label>Send an e-mail</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Send shipping confirmation to the customer</comment>
+                        </send_email>
+                        <shipping_comment translate="label comment">
+                            <label>Shipping Comment</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Internal comment, can be left empty</comment>
+                        </shipping_comment>
+                        <include_comment translate="label comment">
+                            <label>Include comment into e-mail</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Only applies if the shipping comment is set</comment>
+                        </include_comment>
+                    </fields>
+                </import>
+            </groups>
+        </toposscz_cpost>
+    </sections>
+</config>

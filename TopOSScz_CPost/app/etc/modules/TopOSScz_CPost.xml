@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * TopOSScz CPost module
+ *
+ * @category   TopOSScz
+ * @package    TopOSScz_CPost
+ * @copyright  Copyright (c) 2011 TopOSS.cz (Josef Jezek) <magento@toposs.cz>
+ * @license    http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License version 3
+ */
+-->
+<config>
+    <modules>
+        <TopOSScz_CPost>
+            <active>true</active>
+            <codePool>local</codePool>
+        </TopOSScz_CPost>
+    </modules>
+</config>
