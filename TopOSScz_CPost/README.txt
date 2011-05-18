@@ -7,7 +7,7 @@
  * @license    http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License version 3
  */
 
-After copy directory app to your magento run this commands under Ubuntu:
+After copy directory app to your magento run this commands:
 
 MAGENTO=magento # your magento directory
 

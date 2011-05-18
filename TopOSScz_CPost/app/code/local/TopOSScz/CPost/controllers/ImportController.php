@@ -4,7 +4,7 @@
  *
  * @category   TopOSScz
  * @package    TopOSScz_CPost
- * @copyright  Copyright (c) 2011 TopOSS.cz (Josef Jezek) <magento@toposs.cz>
+ * @copyright  Copyright (c) 2009 Jibé <contact via Magento Connect module page>
  * @license    http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License version 3
  */
 class TopOSScz_CPost_ImportController extends Mage_Adminhtml_Controller_Action
@@ -82,11 +82,6 @@ class TopOSScz_CPost_ImportController extends Mage_Adminhtml_Controller_Action
         $sendEmail = Mage::helper('toposscz_cpost')->getConfigurationSendEmail();
         $commentDraft = Mage::helper('toposscz_cpost')->getConfigurationShippingComment();
         $includeComment = Mage::helper('toposscz_cpost')->getConfigurationIncludeComment();
-        $trackingTitle = Mage::helper('toposscz_cpost')->getConfigurationTrackingTitle();
-        //$sendEmail = True;
-        //$commentDraft = $this->__('Obchodní balík BO je na České poště uchován k vyzvednutí max 7 dní! Pohyb Vaší zásilky můžete sledovat online na adrese: http://www.cpost.cz/cz/nastroje/sledovani-zasilky.php?locale=CZ&send.x=0&send.y=0&send=submit&go=ok&barcode=');
-        //$includeComment = True;
-        //$trackingTitle = $this->__('Česká pošta');
 
         /* debug */
         //$this->_getSession()->addSuccess($this->__('%s - %s - %s - %s', $sendEmail, $comment, $includeComment, $trackingTitle));
@@ -168,7 +163,7 @@ class TopOSScz_CPost_ImportController extends Mage_Adminhtml_Controller_Action
          * Check shipment creation availability
          */
         if (!$order->canShip()) {
-            $this->_getSession()->addError($this->__('Order %s - Invoice %s can not be shipped or has already been shipped with tracking number %s', $order->getIncrementId(), $invoice->getIncrementId(), $trackingNumber));
+            $this->_getSession()->addError($this->__('Order %s - Invoice %s can not be shipped or has already been shipped, tracking number %s', $order->getIncrementId(), $invoice->getIncrementId(), $trackingNumber));
             return 0;
         }
 

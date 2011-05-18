@@ -19,7 +19,7 @@
 "Line %s format is invalid and has been ignored","Formát řádku %s je chybný a bude ignorován"
 "Order %s does not exist","Objednávka %s neexistuje"
 "Shipment %s created for order %s, with tracking number %s","Zásilka %s vytvořená pro objednávku %s s číslem zásilky %s"
-"Order %s - Invoice %s can not be shipped or has already been shipped with tracking number %s","Objednávka %s - Faktura %s nemůže být odeslána nebo je již odeslána s číslem zásilky %s"
+"Order %s - Invoice %s can not be shipped or has already been shipped, tracking number %s","Objednávka %s - Faktura %s nemůže být odeslána nebo je již odeslána, číslo zásilky %s"
 "Shipment creation error for Order %s : %s","Chyba při vytváření zásilky pro objednávku %s : %s"
 "Simple Quote","Jednoduché uvozovky"
 "Double Quotes","Dvojité uvozovky"
